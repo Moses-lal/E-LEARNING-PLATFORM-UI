@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-emerald-600 text-white sticky top-0 z-10 shadow-md">
+        <nav class="container mx-auto p-4 flex justify-between items-center">
+            <div class="text-2xl font-bold">EduPlatform</div>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-emerald-200">Home</a></li>
+                <li><a href="#" class="hover:text-emerald-200">Courses</a></li>
+                <li><a href="#" class="hover:text-emerald-200">About</a></li>
+                <li><a href="#" class="hover:text-emerald-200">Contact</a></li>
+                <li><a href="#" class="bg-white text-emerald-600 px-4 py-2 rounded hover:bg-emerald-100">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-emerald-500 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Learn Anything, Anytime, Anywhere</h1>
+            <p class="text-lg mb-6">Explore thousands of courses from top instructors around the world.</p>
+            <a href="#" class="bg-yellow-400 text-black px-6 py-3 rounded-full font-semibold hover:bg-yellow-500">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Course Filter -->
+    <section class="container mx-auto py-10">
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-2xl font-bold">Our Courses</h2>
+            <select id="courseFilter" class="p-2 border rounded">
+                <option value="all">All Categories</option>
+                <option value="programming">Programming</option>
+                <option value="design">Design</option>
+                <option value="business">Business</option>
+            </select>
+        </div>
+
+        <!-- Course Grid -->
+        <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Course Card: Python -->
+            <div class="course-card bg-white shadow-md rounded-lg p-4" data-category="programming" data-course-id="python">
+                <img src="https://i.ytimg.com/vi/_uQrJ0TkZlc/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC7WhCVi8Cw6N5lI5BPCH3wznm58g" alt="Python Course Image" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold">Python for Beginners</h3>
+                <p class="text-gray-600 mb-2">Learn Python programming from scratch with hands-on projects.</p>
+                <p class="text-emerald-600 font-bold">$49.99</p>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-600">Progress: <span class="progress-text">0%</span></p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Enroll Now</a>
+                    <button class="preview-video inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700" data-video="https://www.youtube.com/embed/K5KVEU3aaeQ">Preview</button>
+                </div>
+            </div>
+            <!-- Course Card: Full Stack Web Development -->
+            <div class="course-card bg-white shadow-md rounded-lg p-4" data-category="programming" data-course-id="fullstack">
+                <img src="https://www.cromacampus.com/public/uploads/Blog/2024/09/week_2/web-development-course-syllabus-for-beginners-66e1713a7bcfc.webp" alt="Web Development Course Image" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold">Full Stack Web Development</h3>
+                <p class="text-gray-600 mb-2">Build modern web apps with HTML, CSS, JavaScript, and Node.js.</p>
+                <p class="text-emerald-600 font-bold">$79.99</p>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-600">Progress: <span class="progress-text">0%</span></p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Enroll Now</a>
+                    <button class="preview-video inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700" data-video="https://www.youtube.com/embed/tVzUXW6siu0">Preview</button>
+                </div>
+            </div>
+            <!-- Course Card: UI/UX -->
+            <div class="course-card bg-white shadow-md rounded-lg p-4" data-category="design" data-course-id="uiux">
+                <img src="https://zoople.in/wp-content/uploads/2022/09/April-022.jpg" alt="UI/UX Course Image" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold">UI/UX Design Fundamentals</h3>
+                <p class="text-gray-600 mb-2">Master the art of designing user-friendly interfaces.</p>
+                <p class="text-emerald-600 font-bold">$59.99</p>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-600">Progress: <span class="progress-text">0%</span></p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Enroll Now</a>
+                    <button class="preview-video inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700" data-video="https://www.youtube.com/embed/O5IXf8qB9U4">Preview</button>
+                </div>
+            </div>
+            <!-- Course Card: Digital Marketing -->
+            <div class="course-card bg-white shadow-md rounded-lg p-4" data-category="business" data-course-id="digitalmarketing">
+                <img src="https://i.ytimg.com/vi/JghrmfcukOs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB_ThvWywWkxD-Sfg3bcz33Zbsheg" alt="Digital Marketing Course Image" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold">Digital Marketing 101</h3>
+                <p class="text-gray-600 mb-2">Boost your business with effective online strategies.</p>
+                <p class="text-emerald-600 font-bold">$39.99</p>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-600">Progress: <span class="progress-text">0%</span></p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Enroll Now</a>
+                    <button class="preview-video inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700" data-video="https://www.youtube.com/embed/KZLroOQKT-g">Preview</button>
+                </div>
+            </div>
+            <!-- Course Card: Data Analytics -->
+            <div class="course-card bg-white shadow-md rounded-lg p-4" data-category="business" data-course-id="dataanalytics">
+                <img src="https://img.youtube.com/vi/jV_VqB4Oi2k/mqdefault.jpg" alt="Data Analytics Course Image" class="w-full h-40 object-cover rounded-md mb-4">
+                <h3 class="text-xl font-semibold">Data Analytics Course</h3>
+                <p class="text-gray-600 mb-2">Unlock insights with data visualization and analytics tools.</p>
+                <p class="text-emerald-600 font-bold">$69.99</p>
+                <div class="mt-2">
+                    <p class="text-sm text-gray-600">Progress: <span class="progress-text">0%</span></p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5">
+                        <div class="progress-bar bg-emerald-600 h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="mt-4 flex space-x-2">
+                    <a href="#" class="inline-block bg-emerald-600 text-white px-4 py-2 rounded hover:bg-emerald-700">Enroll Now</a>
+                    <button class="preview-video inline-block bg-gray-600 text-white px-4 py-2 rounded hover:bg-gray-700" data-video="https://www.youtube.com/embed/5zEt1_Nkiio">Preview</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+        <div class="bg-white rounded-lg p-4 max-w-3xl w-full">
+            <div class="flex justify-end">
+                <button id="closeModal" class="text-gray-600 hover:text-gray-800">
+                    <i class="fas fa-times text-2xl"></i>
+                </button>
+            </div>
+            <div class="relative" style="padding-top: 56.25%;">
+                <iframe id="videoFrame" class="absolute top-0 left-0 w-full h-full" src="" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div>
+                <h3 class="text-lg font-bold mb-4">EduPlatform</h3>
+                <p>Empowering learners worldwide with accessible education.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-emerald-300">Home</a></li>
+                    <li><a href="#" class="hover:text-emerald-300">Courses</a></li>
+                    <li><a href="#" class="hover:text-emerald-300">Support</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                <p>Email: support@eduplatform.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-2xl"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Course Filter Functionality
+        const courseFilter = document.getElementById('courseFilter');
+        const courseCards = document.querySelectorAll('.course-card');
+        const videoModal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const closeModal = document.getElementById('closeModal');
+        const previewButtons = document.querySelectorAll('.preview-video');
+
+        // Course Filter
+        courseFilter.addEventListener('change', () => {
+            const selectedCategory = courseFilter.value;
+            courseCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                if (selectedCategory === 'all' || selectedCategory === cardCategory) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Progress Tracking
+        function updateProgress(courseId, progress) {
+            localStorage.setItem(`courseProgress_${courseId}`, progress);
+            const card = document.querySelector(`[data-course-id="${courseId}"]`);
+            const progressBar = card.querySelector('.progress-bar');
+            const progressText = card.querySelector('.progress-text');
+            progressBar.style.width = `${progress}%`;
+            progressText.textContent = `${progress}%`;
+        }
+
+        function loadProgress() {
+            courseCards.forEach(card => {
+                const courseId = card.getAttribute('data-course-id');
+                const progress = localStorage.getItem(`courseProgress_${courseId}`) || 0;
+                const progressBar = card.querySelector('.progress-bar');
+                const progressText = card.querySelector('.progress-text');
+                progressBar.style.width = `${progress}%`;
+                progressText.textContent = `${progress}%`;
+            });
+        }
+
+        // Simulate progress update (for demo purposes)
+        courseCards.forEach(card => {
+            const courseId = card.getAttribute('data-course-id');
+            const enrollButton = card.querySelector('a.bg-emerald-600');
+            enrollButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                let progress = parseInt(localStorage.getItem(`courseProgress_${courseId}`) || 0);
+                progress = Math.min(progress + 10, 100); // Increment by 10% up to 100%
+                updateProgress(courseId, progress);
+            });
+        });
+
+        // Video Modal Functionality
+        previewButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const videoUrl = button.getAttribute('data-video');
+                videoFrame.src = videoUrl;
+                videoModal.classList.remove('hidden');
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            videoModal.classList.add('hidden');
+            videoFrame.src = ''; // Stop video by clearing source
+        });
+
+        // Close modal when clicking outside
+        videoModal.addEventListener('click', (e) => {
+            if (e.target === videoModal) {
+                videoModal.classList.add('hidden');
+                videoFrame.src = '';
+            }
+        });
+
+        // Load progress on page load
+        loadProgress();
+    </script>
+</body>
+</html>
