@@ -15,6 +15,7 @@ MENTOR - NEELA SANTOSH
 # Description for E-Learning Platform 
 
 #overview 
+
 EduPlatform is a user-friendly, responsive front-end interface for an E-Learning website that allows users to explore, preview, and track progress across various online courses. Designed with a modern layout using HTML, Tailwind CSS, and JavaScript, the platform simulates key functionality found in real-world EdTech applications, including category filtering, video previews, and progress tracking.
 
 The primary aim of this project is to provide an engaging digital learning environment that supports discoverability and usability. It can serve as a front-end template for educational institutions, training centers, or personal portfolios showcasing UI development and JavaScript skills.
